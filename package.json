@@ -1,0 +1,17 @@
+{
+  "name": "parcial1-web",
+  "version": "1.0.0",
+  "description": "Parcial 1 - Desarrollo web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Js",
+    "nodeJs",
+    "EJS",
+    "express"
+  ],
+  "author": "Juan Andres Gonzalez Estepa",
+  "license": "ISC"
+}
