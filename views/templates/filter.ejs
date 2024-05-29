@@ -1,0 +1,24 @@
+<div class="card rounded p-3 shadow">
+    <div class="row">
+        <div class="form-group my-2 col">
+            <label for="homeworld">Lugar de origen:</label>
+            <select required class="form-control" id="homeworld">
+                <option value="No">Sin filtro</option>
+                <% for (const [key,value] of homeworld) { %>
+                    <option value="<%=key  %>"><%= key  %></option>
+                  <% } %>
+            </select>
+          </div>
+          <div class="form-group my-2 col">
+            <label for="species">Especie:</label>
+            <select required class="form-control" id="species">
+              <option value="No">Sin filtro</option>
+              <% for (const [key,value] of species) { %>
+                <option value="<%=key  %>"><%= key  %></option>
+              <% } %>
+            </select>
+          </div>
+    </div>
+    <button id="btnSend" type="submit" class="col btn btn-secondary m-2" required>Filtrar</button>
+
+</div>

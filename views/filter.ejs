@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%-include('./templates/header.ejs')%>
+  <body>
+    <div class="container mt-3">
+      <h1 class="text-center ">LISTA DE PERSONAJES</h1>
+      <%-include('./templates/filter.ejs')%>
+      <div class="row row-cols-3 justify-content-center">
+        <% if(data.size >0){ %> <% for (const [key,value] of data) { %>
+            <div class="card col m-3 shadow" style="width: 18rem">
+              <div class="card-body">
+                <h5 class="card-title"><%= value.name  %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary"><%= value.species  %></h6>
+                <ul>
+                  <li>Altura: <%= value.height  %>cm</li>
+                  <li>Peso: <%= value.mass  %>kg</li>
+                  <li>Color de cabello: <%= value.hair_color  %></li>
+                  <li>Color de piel: <%= value.skin_color  %></li>
+                  <li>Color de ojos: <%= value.eye_color  %></li>
+                  <li>Año de nacimiento: <%= value.birth_year  %></li>
+                  <li>genero: <%= value.gender  %></li>
+                  <li>Planeta de origen: <%= value.homeworld  %></li>
+                </ul>
+              </div>
+            </div>
+            <% }}else{ %>
+            <p>No hay elementsos para mostrar</p>
+            <% } %>
+      </div>
+      
+    </div>
+    <!--FOOTER QUE EJECTURA UN SCRIPT PARA EL BOOTSTRAP-->
+    <%-include('./templates/footer.ejs')%>
+    <script src="filter.js"></script>
+  </body>
+</html>
+
+
+
