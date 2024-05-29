@@ -2,11 +2,6 @@ document.getElementById("btnSend").addEventListener("click", () => {
   const homeworld = document.getElementById("homeworld").value;
   const species = document.getElementById("species").value;
 
-  const filter = {
-    homeworld: homeworld,
-    species: species,
-  };
-
   if (homeworld == "SF" && species == "SF") {
     const URL = "/";
     fetch(URL, {

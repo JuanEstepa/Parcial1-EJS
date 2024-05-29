@@ -44,16 +44,16 @@ router.get("/:homeworld/:species", (req, res) => {
   filterMap.clear();
 
   starWars.forEach((value, key) => {
-    if (value.homeworld === homeworld) {
+    if (value.homeworld === homeworld || value.species === species) {
       filterMap.set(key, value);
     }
   });
 
   console.log(filterMap);
-
+  res.redirect(`/${homeworld}/${species}`);
   res.render("filter.ejs", {
     title: "Filter",
-    data: starWars,
+    data: filterMap,
     species: speciesMap,
     homeworld: homeworldMap,
   });

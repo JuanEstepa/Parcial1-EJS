@@ -3,7 +3,7 @@
         <div class="form-group my-2 col">
             <label for="homeworld">Lugar de origen:</label>
             <select required class="form-control" id="homeworld">
-                <option value="No">Sin filtro</option>
+                <option value="SF">Sin filtro</option>
                 <% for (const [key,value] of homeworld) { %>
                     <option value="<%=key  %>"><%= key  %></option>
                   <% } %>
@@ -12,7 +12,7 @@
           <div class="form-group my-2 col">
             <label for="species">Especie:</label>
             <select required class="form-control" id="species">
-              <option value="No">Sin filtro</option>
+              <option value="SF">Sin filtro</option>
               <% for (const [key,value] of species) { %>
                 <option value="<%=key  %>"><%= key  %></option>
               <% } %>
